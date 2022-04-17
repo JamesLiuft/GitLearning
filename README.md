@@ -84,3 +84,69 @@ To https://github.com/JamesLiuft/GitLearning.git
 这是提交后的情况，提交完就同步到远程仓库啦。不要以为commit以后才是重点呀~~
 
 2. 待定
+
+#### 检出-切换分支或恢复工作树文件 (git-checkout - Switch branches or restore working tree files)
+    git-checkout
+- 举堆栗子^_^
+
+1. 切换Spring-Framework 5.3.x分支
+   >  切换前查看分支
+``` 
+$ git branch -a
+* main
+  remotes/origin/3.0.x
+  remotes/origin/3.1.x
+  remotes/origin/3.2.x
+  remotes/origin/4.0.x
+  remotes/origin/4.1.x
+  remotes/origin/4.2.x
+  remotes/origin/4.3.x
+  remotes/origin/5.0.x
+  remotes/origin/5.1.x
+  remotes/origin/5.2.x
+  remotes/origin/5.3.x
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/beanbuilder
+  remotes/origin/conversation
+  remotes/origin/gh-pages
+  remotes/origin/main
+
+```
+
+  ###### 开始检出
+  ```
+  $ git checkout origin/5.3.x
+Updating files: 100% (2335/2335), done.
+Note: switching to 'origin/5.3.x'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at d7212bc236 backup that makes my compiler errors file
+
+  ```
+ ###### 开始切换
+ 
+ ```
+ 
+$ git switch -c 5.3.x
+Switched to a new branch '5.3.x'
+
+##当前所在分支
+$ git branch
+* 5.3.x
+  main
+
+ ```
