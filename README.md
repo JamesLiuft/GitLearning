@@ -1,6 +1,8 @@
 # GitLearning
 some git commands record
 
+### 基础操作
+
 #### 查看当前work tree中的状态
 	git status
 - 举堆栗子^_^
@@ -84,3 +86,100 @@ To https://github.com/JamesLiuft/GitLearning.git
 这是提交后的情况，提交完就同步到远程仓库啦。不要以为commit以后才是重点呀~~
 
 2. 待定
+
+### 如何从原始fork的仓库的修改同步到自己仓库
+
+#### 关联原仓库地址
+
+```
+git remote add 	
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+```
+1. 以Spring Framework为例，我之前已经fork了原始的仓库到我自己的github里，使用```git remote -v```查看是否存在原始仓库（git remote-管理一组跟踪的存储库）
+```
+$ git remote -v
+origin  https://github.com/JamesLiuft/spring-framework.git (fetch)
+origin  https://github.com/JamesLiuft/spring-framework.git (push)
+```
+2. 添加上游仓库后查看
+```
+$ git remote add upstream https://github.com/spring-projects/spring-framework.git
+
+James@JAMES_PC MINGW64 /f/00OpenSource/MyRespo/spring-framework (5.3.x)
+$ git remote -v
+origin  https://github.com/JamesLiuft/spring-framework.git (fetch)
+origin  https://github.com/JamesLiuft/spring-framework.git (push)
+upstream        https://github.com/spring-projects/spring-framework.git (fetch)
+upstream        https://github.com/spring-projects/spring-framework.git (push)
+```
+3. 更新上游仓库相关的资源 ```git fetch```
+```
+$ git fetch upstream
+remote: Enumerating objects: 5238, done.
+remote: Counting objects: 100% (1776/1776), done.
+remote: Total 5238 (delta 1776), reused 1776 (delta 1776), pack-reused 3462 eceiving objects: 100% (5238/5238), 1.12 MiBReceiving objects: 100% (5238/5238), 1.17 MiB | 371.00 KiB/s, done.
+
+Resolving deltas: 100% (2415/2415), completed with 918 local objects.
+From https://github.com/spring-projects/spring-framework
+ * [new branch]            3.0.x        -> upstream/3.0.x
+ * [new branch]            3.1.x        -> upstream/3.1.x
+ * [new branch]            3.2.x        -> upstream/3.2.x
+ * [new branch]            4.0.x        -> upstream/4.0.x
+ * [new branch]            4.1.x        -> upstream/4.1.x
+ * [new branch]            4.2.x        -> upstream/4.2.x
+ * [new branch]            4.3.x        -> upstream/4.3.x
+ * [new branch]            5.0.x        -> upstream/5.0.x
+ * [new branch]            5.1.x        -> upstream/5.1.x
+ * [new branch]            5.2.x        -> upstream/5.2.x
+ * [new branch]            5.3.x        -> upstream/5.3.x
+ * [new branch]            beanbuilder  -> upstream/beanbuilder
+ * [new branch]            conversation -> upstream/conversation
+ * [new branch]            gh-pages     -> upstream/gh-pages
+ * [new branch]            main         -> upstream/main
+
+```
+
+#### 网页同步方式
+
+<a url="">点个按钮就可以</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
