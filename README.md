@@ -150,7 +150,7 @@ From https://github.com/spring-projects/spring-framework
 
 #### 网页同步方式
 
-<a url="">点个按钮就可以</a>
+<a url="https://github.com/JamesLiuft/GitLearning/blob/main/Pictures/fetch_upstream.png">点个按钮就可以</a>
 
 
 
