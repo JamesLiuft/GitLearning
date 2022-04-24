@@ -10,8 +10,11 @@ some git commands record
 
 [4. 添加文件由git管理 ](#4)
 
+[5. 提交变更](#5)
 
 <p id="1"></p>
+
+
 
 #### 1.查看当前work tree中的状态
 	git status
@@ -69,7 +72,10 @@ James@JAMES_PC MINGW64 /f/00OpenSource/MyRespo/GitLearning (main)
 其实这个的意思就是按照原文直译的意思添加到索引后的情况：git对待这个文件的状态由原来的*not staged*  变成了 *will be committed*。接下来可以执行```git commit```啦
 
 2. 待定
-#### 提交变更
+
+<p id="5"></p>
+
+#### 5.提交变更
 	git commit
 - 举堆栗子^_^
 1. Hi，add以后我执行commit啦！这里commit以后要写提交日志，比如：做了哪些修改，解决了哪些bug，为什么这样操作等等。不要觉得我这个测试log写得太简单而提issue啥的，提了我也给你删了，我是仓库管理员，我有绝对的权力。好啦，多哔哔了也没用了，又菜又能说就是我~~~下一步进行push吧
@@ -105,9 +111,9 @@ To https://github.com/JamesLiuft/GitLearning.git
 
 2. 待定
 
-### 如何从原始fork的仓库的修改同步到自己仓库
+### 二、如何从原始fork的仓库的修改同步到自己仓库
 
-#### 关联原仓库地址
+#### 1.关联原仓库地址
 
 ```
 git remote add 	
@@ -122,13 +128,13 @@ usage: git remote add [<options>] <name> <url>
     --mirror[=(push|fetch)]
                           set up remote as a mirror to push to or fetch from
 ```
-1. 以Spring Framework为例，我之前已经fork了原始的仓库到我自己的github里，使用```git remote -v```查看是否存在原始仓库（git remote-管理一组跟踪的存储库）
+#### 2.以Spring Framework为例，我之前已经fork了原始的仓库到我自己的github里，使用```git remote -v```查看是否存在原始仓库（git remote-管理一组跟踪的存储库）
 ```
 $ git remote -v
 origin  https://github.com/JamesLiuft/spring-framework.git (fetch)
 origin  https://github.com/JamesLiuft/spring-framework.git (push)
 ```
-2. 添加上游仓库后查看
+#### 3. 添加上游仓库后查看
 ```
 $ git remote add upstream https://github.com/spring-projects/spring-framework.git
 
@@ -139,7 +145,7 @@ origin  https://github.com/JamesLiuft/spring-framework.git (push)
 upstream        https://github.com/spring-projects/spring-framework.git (fetch)
 upstream        https://github.com/spring-projects/spring-framework.git (push)
 ```
-3. 更新上游仓库相关的资源 ```git fetch```
+#### 4. 更新上游仓库相关的资源 ```git fetch```
 ```
 $ git fetch upstream
 remote: Enumerating objects: 5238, done.
@@ -166,12 +172,12 @@ From https://github.com/spring-projects/spring-framework
 
 ```
 
-#### 网页同步方式
-
+#### 5. 网页同步方式
+ 
 <a href="https://github.com/JamesLiuft/GitLearning/blob/main/Pictures/fetch_upstream.png">点个按钮就可以</a>
 
 
-#### 从upstream进行分支同步&冲突处理
+#### 6. 从upstream进行分支同步&冲突处理
 
 1. 通过fetch_upstream并处理<a href="https://github.com/JamesLiuft/GitLearning/blob/main/Pictures/pull_request_deal.png">pull request</a>后，
 ``` 
