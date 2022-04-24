@@ -153,8 +153,15 @@ From https://github.com/spring-projects/spring-framework
 <a href="https://github.com/JamesLiuft/GitLearning/blob/main/Pictures/fetch_upstream.png">点个按钮就可以</a>
 
 
+#### 从upstream进行分支同步&冲突处理
 
-
+1. 通过fetch_upstream并处理<a href="https://github.com/JamesLiuft/GitLearning/blob/main/Pictures/pull_request_deal.png">pull request</a>后，
+``` 
+git pull https://github.com/spring-projects/spring-framework.git 5.3.x
+git checkout 5.3.x
+git merge --no-ff spring-projects-5.3.x
+git push origin 5.3.x
+```
 
 
 
