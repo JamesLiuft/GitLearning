@@ -12,6 +12,8 @@ some git commands record
 
 [5. 提交变更](#5)
 
+[6.将变更同步到远端仓库（原始帮助直译：git push-更新远程引用以及相关对象）](#6)
+
 <p id="1"></p>
 
 
@@ -91,7 +93,10 @@ $
 ```
 
 2. 待定
-#### 将变更同步到远端仓库（原始帮助直译：git push-更新远程引用以及相关对象）
+
+<p id="6"></p>
+
+#### 6.将变更同步到远端仓库（原始帮助直译：git push-更新远程引用以及相关对象）
 	git push
 - 举堆栗子^_^
 1. 来到第一天的终点了，到达这里就下班溜了溜了。
@@ -113,6 +118,21 @@ To https://github.com/JamesLiuft/GitLearning.git
 
 ### 二、如何从原始fork的仓库的修改同步到自己仓库
 
+[1.关联原仓库地址](#20)
+
+[2.查看上游仓库是否存在](#21)
+
+[3.添加上游仓库](#22)
+
+[4.从上游仓库更新](#23)
+
+[5.网页同步方式](#24)
+
+[6.分支更新和冲突处理](#25)
+
+
+<p id="20"></p>
+
 #### 1.关联原仓库地址
 
 ```
@@ -128,12 +148,18 @@ usage: git remote add [<options>] <name> <url>
     --mirror[=(push|fetch)]
                           set up remote as a mirror to push to or fetch from
 ```
+
+<p id="21"></p>
+
 #### 2.以Spring Framework为例，我之前已经fork了原始的仓库到我自己的github里，使用```git remote -v```查看是否存在原始仓库（git remote-管理一组跟踪的存储库）
 ```
 $ git remote -v
 origin  https://github.com/JamesLiuft/spring-framework.git (fetch)
 origin  https://github.com/JamesLiuft/spring-framework.git (push)
 ```
+
+<p id="22"></p>
+
 #### 3. 添加上游仓库后查看
 ```
 $ git remote add upstream https://github.com/spring-projects/spring-framework.git
@@ -145,7 +171,10 @@ origin  https://github.com/JamesLiuft/spring-framework.git (push)
 upstream        https://github.com/spring-projects/spring-framework.git (fetch)
 upstream        https://github.com/spring-projects/spring-framework.git (push)
 ```
-#### 4. 更新上游仓库相关的资源 ```git fetch```
+
+<p id="23"></p>
+
+#### 4. 从上游仓库更新相关的资源 ```git fetch```
 ```
 $ git fetch upstream
 remote: Enumerating objects: 5238, done.
@@ -172,12 +201,15 @@ From https://github.com/spring-projects/spring-framework
 
 ```
 
+<p id="24"></p>
+
 #### 5. 网页同步方式
  
 <a href="https://github.com/JamesLiuft/GitLearning/blob/main/Pictures/fetch_upstream.png">点个按钮就可以</a>
 
+<p id="25"></p>
 
-#### 6. 从upstream进行分支同步&冲突处理
+#### 6. 分支更新和冲突处理
 
 1. 通过fetch_upstream并处理<a href="https://github.com/JamesLiuft/GitLearning/blob/main/Pictures/pull_request_deal.png">pull request</a>后，
 ``` 
