@@ -1,9 +1,19 @@
 # GitLearning
 some git commands record
 
-### 基础操作
+### 一、基础操作
+[1. 看当前work tree中的状态 ](#1)
 
-#### 查看当前work tree中的状态
+[2. 查看提交日志 ](#2)
+
+[3. 从远端server恢复文件 ](#3)
+
+[4. 添加文件由git管理 ](#4)
+
+
+<p id="1"></p>
+
+#### 1.查看当前work tree中的状态
 	git status
 - 举堆栗子^_^
 1. 比如我查看这个仓库的状态现在是这样的。
@@ -19,17 +29,25 @@ Changes not staged for commit:
 &nbsp;&nbsp;&nbsp;&nbsp;神马叫```changes not staged for commit```呢？意思就是可以<a href='https://fanyi.baidu.com/?aldtype=23#en/zh/changes%20not%20staged%20for%20commit' >百度翻译一下</a>就是有更改没有提交。如何提交就按照括弧里的搞就行啦。去看```git add```第一个栗子吧
 
 2. 待定
-#### 查看提交日志
+<p id="2"></p>
+
+#### 2.查看提交日志
 	git log   
 - 举堆栗子^_^
 1. 待定
 2. 待定
-#### 从远端server恢复文件
+
+<p id="3"></p>
+
+#### 3.从远端server恢复文件
 	git restore filepath
 - 举堆栗子^_^
 1. 待定
 2. 待定
-#### 添加文件由git管理（原文直译：将文件内容添加到索引）
+
+<p id="4"></p>
+
+#### 4.添加文件由git管理（原文直译：将文件内容添加到索引）
 	git add 
 - 举堆栗子^_^
 1. 这个标题叫啥呢，不会起，反正就是我操作了下```git add README.md```就这样啦。
