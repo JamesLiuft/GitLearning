@@ -314,3 +314,19 @@ git push origin 5.3.x
 
 
 >>>>>>> 7623019fe305bee9d7596e1ae777ca0e38f14c35
+
+
+
+### 三、创建一个新的仓库名叫XiaoWanYi
+…or create a new repository on the command line
+echo "# XiaoWanYi" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/JamesLiuft/XiaoWanYi.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/JamesLiuft/XiaoWanYi.git
+git branch -M main
+git push -u origin main
