@@ -318,7 +318,7 @@ git push origin 5.3.x
 
 
 ### 三、创建一个新的仓库名叫XiaoWanYi
-…or create a new repository on the command line
+``` or create a new repository on the command line
 echo "# XiaoWanYi" >> README.md
 git init
 git add README.md
@@ -330,3 +330,4 @@ git push -u origin main
 git remote add origin https://github.com/JamesLiuft/XiaoWanYi.git
 git branch -M main
 git push -u origin main
+```
